@@ -1,9 +1,10 @@
 import React from "react"; 
 import styled from "styled-components";   
 import {items} from "../data"; 
-
-let item = Object.values(items); 
-  
+import ListingGrid from "./ListingGrid"; 
+import ItemList from "./ItemList";
+// let item = Object.values(items); 
+// let name = item.name;
 
 
 function Home() { 
@@ -14,14 +15,19 @@ function Home() {
       <p>Fruit emporium sells the finest fruits from this world and beyond.
 
 Browse items:</p> 
-    <div> 
-    
-    </div>
+    <MainDiv> 
+   <ListingGrid itemArray={Object.values(items)} />
+    </MainDiv>
 
 
     </div>
   );
 }    
-console.log(item);
+const MainDiv = styled.div` 
+display:flex;    
+justify-content:center;
+flex-wrap: wrap; 
+max-width:100vw;
+`;
    
   export default  Home;
