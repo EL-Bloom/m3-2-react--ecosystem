@@ -2,10 +2,12 @@ import React from "react";
 import ItemList from "./ItemList";
 import PropTypes from "prop-types"; 
 import styled from "styled-components"; 
+import { Link } from "react-router-dom"; 
 
 const ListingGrid = ({ itemArray }) => {
   let output = itemArray.map((item) => {
-    return (<Wrapper> 
+    return (<Wrapper>  
+     
       <Div key={item.id}>{ItemList(item)}</Div> 
       </Wrapper>);
   });
@@ -30,7 +32,7 @@ const Div = styled.div`
 `;
 const Wrapper = styled.div`   
 margin:10px;
-
+background-color:white;
 `;
 
 export default ListingGrid;

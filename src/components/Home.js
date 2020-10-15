@@ -27,7 +27,9 @@ const MainDiv = styled.div`
 display:flex;    
 justify-content:center;
 flex-wrap: wrap; 
-max-width:100vw;
+max-width:100vw; 
+background-color: #f2f2f2;  
+border-top: 2px solid lightgray;
 `;
    
   export default  Home;
